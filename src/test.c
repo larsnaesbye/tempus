@@ -18,10 +18,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 int main() {
 
-printf("hello\n");
+time_t timer;
+char buffer[26];
+struct tm* tm_info;
+
+time(&timer);
+tm_info = localtime(&timer)
+
+strftime(buffer, 26, "%Y:%m:%d %H:%M:%S.000", tm_info);
+puts(buffer);
+
+return 0;
+
 }
 
 /*

@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# DONE:
-# Keep window on top
-# About... Dialog
+# My first non-attempt to play with GTK and Python. I am opting for C instead.
 #
 # TODO: (0.1 - august)
 # use the Astropy libs
