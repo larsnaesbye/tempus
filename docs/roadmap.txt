@@ -1,11 +1,12 @@
 === pre-release roadmap
 
-Accelerators
-Time display, static
+
+Time display, static label
 
 0.5:
-Full GTK 2 UI setup as in AC2
 Time display, updates
+Full GTK 2 UI setup as in AC2
+
 
 0.6:
 Location setting
@@ -16,10 +17,11 @@ Chime functionality
 Cleanup and refactor cpp files/classes
 
 0.8:
+Imagefactory UI
 Switch to GTK 3
-Prettify layout
 
 0.9:
+Prettify thoroughly
 SVG icon
 Present to BG for potential inclusion in Distro Astro
 

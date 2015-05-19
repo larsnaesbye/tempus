@@ -1,3 +1,3 @@
 
 
-const string ATversion = "0.1";
+const char* ATversion = "0.1";
