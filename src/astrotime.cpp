@@ -46,6 +46,9 @@ int main (int argc, char *argv[])
 
   GtkWidget *file = NULL;
   GtkWidget *exit = NULL;
+
+  GtkWidget *location = NULL;
+  GtkWidget *setlocation = NULL;  
   
   GtkWidget *time = NULL;
   GtkWidget *lmt12 = NULL;
@@ -59,9 +62,6 @@ int main (int argc, char *argv[])
   GtkWidget *none = NULL;
   GtkWidget *single = NULL;
   GtkWidget *multiple = NULL;
-  
-  GtkWidget *location = NULL;
-  GtkWidget *setlocation = NULL;  
   
   GtkWidget *help = NULL;
   GtkWidget *about = NULL;
@@ -77,6 +77,7 @@ int main (int argc, char *argv[])
   gtk_window_set_default_size(GTK_WINDOW (win), 500, 200);
   gtk_container_set_border_width (GTK_CONTAINER (win), 5);
   gtk_window_set_title (GTK_WINDOW (win), "AstroTime "+ATversion);
+  gtk_window_set_decorated (GTK_WINDOW (win), FALSE);
   gtk_window_set_position (GTK_WINDOW (win), GTK_WIN_POS_CENTER);
   gtk_window_set_keep_above (GTK_WINDOW (win), TRUE);
   gtk_widget_realize (win);
@@ -84,7 +85,7 @@ int main (int argc, char *argv[])
   /* Create our menu bar */
   menubar = gtk_menu_bar_new();
     
-  /* Build the menus with menu items */
+  /* Build our menus with menu items */
 
   filemenu = gtk_menu_new();
   file = gtk_menu_item_new_with_label("File");

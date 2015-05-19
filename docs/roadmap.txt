@@ -1,0 +1,27 @@
+=== pre-release roadmap
+
+Accelerators
+Time display, static
+
+0.5:
+Full GTK 2 UI setup as in AC2
+Time display, updates
+
+0.6:
+Location setting
+Docs in LaTeX + PDF
+
+0.7:
+Chime functionality
+Cleanup and refactor cpp files/classes
+
+0.8:
+Switch to GTK 3
+Prettify layout
+
+0.9:
+SVG icon
+Present to BG for potential inclusion in Distro Astro
+
+1.0:
+release
