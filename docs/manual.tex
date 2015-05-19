@@ -1,11 +1,10 @@
 
 \documentclass[12pt,danish]{scrartcl}
 \usepackage{fancyhdr}
-\usepackage{lastpage}
 
-\title{AstroTime}
+\title{AstroTime 0.1}
 \subtitle{User Manual}
-\author{Lars Naesbye Christensen}
+\author{Lars N{\ae}sbye Christensen}
 \date{\today}
 
 \begin{document}
@@ -14,15 +13,22 @@
 \chead{}
 \rhead{{\scriptsize \today}}
 \lfoot{}
-\cfoot{\raisebox{-2mm} {Page {\thepage} of \pageref{LastPage}}}
+\cfoot{\raisebox{-2mm} {Page {\thepage}}}
 \rfoot{}
 \maketitle
 \pagebreak
-
 \tableofcontents
 \pagebreak
-\section{First section}
 
+\input{introduction.tex}
+\pagebreak
 
+\input{usage.tex}
+\pagebreak
+
+\input{versionhistory.tex}
+\pagebreak
+
+\input{links.tex}
 
 \end{document}
