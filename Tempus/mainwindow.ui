@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>324</width>
+    <height>98</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Tempus</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>324</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuLocation">
+    <property name="title">
+     <string>Location</string>
+    </property>
+    <addaction name="actionSet_Location"/>
+   </widget>
+   <widget class="QMenu" name="menuTime">
+    <property name="title">
+     <string>Time</string>
+    </property>
+    <addaction name="actionLocal_Mean_Time_12_hr_format"/>
+    <addaction name="actionLocal_Mean_Time_24_hr_format"/>
+    <addaction name="actionUniversal_Time"/>
+    <addaction name="separator"/>
+    <addaction name="actionLocal_Sidereal_Time"/>
+    <addaction name="actionGreenwich_Sidereal_Time"/>
+   </widget>
+   <widget class="QMenu" name="menuChimes">
+    <property name="title">
+     <string>Chimes</string>
+    </property>
+    <addaction name="actionNone"/>
+    <addaction name="actionSingle"/>
+    <addaction name="actionMultiple"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout_Tempus"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuLocation"/>
+   <addaction name="menuTime"/>
+   <addaction name="menuChimes"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionSet_Location">
+   <property name="text">
+    <string>Set Location...</string>
+   </property>
+  </action>
+  <action name="actionLocal_Mean_Time_12_hr_format">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Local Mean Time (12 hr format)</string>
+   </property>
+  </action>
+  <action name="actionLocal_Mean_Time_24_hr_format">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Local Mean Time (24 hr format)</string>
+   </property>
+  </action>
+  <action name="actionUniversal_Time">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Universal Time</string>
+   </property>
+  </action>
+  <action name="actionLocal_Sidereal_Time">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Local Sidereal Time</string>
+   </property>
+  </action>
+  <action name="actionGreenwich_Sidereal_Time">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Greenwich Sidereal Time</string>
+   </property>
+  </action>
+  <action name="actionNone">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>None</string>
+   </property>
+  </action>
+  <action name="actionSingle">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Single</string>
+   </property>
+  </action>
+  <action name="actionMultiple">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Multiple</string>
+   </property>
+  </action>
+  <action name="actionAbout_Tempus">
+   <property name="text">
+    <string>About Tempus...</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
