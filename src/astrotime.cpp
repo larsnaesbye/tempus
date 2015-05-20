@@ -8,8 +8,6 @@
 #include <stdlib.h>
 #include <gtk/gtk.h>
 
-#include "headers/Constants.h" /*unused for now*/
-
 static void AboutDialog (GtkWidget *wid, GtkWidget *win)
 {
   GtkWidget *dialog = NULL;
