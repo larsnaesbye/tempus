@@ -2,10 +2,22 @@
 
 This section explains a little of the ways you can use Tempus to view the current time.
 
-Tempus runs as an ordinary desktop application, using familiar menus, windows, and controls. It has one window, displaying the time in a scalable view.
+Tempus runs as an ordinary desktop application, using familiar menus, windows, and controls. It has one window, displaying the time in a scalable view as the central information in big type.
+
+The location obviously affects the time, so Tempus needs to know your location to calculate sidereal times. You can set your location in the \texttt{Location} menu.
+
 
 \subsection{Formats and standards}
 
-Tempus aims to use the following scientific standards:
+The current time formats supported are:
+\begin{itemize}
+    \item[\#] Local Mean Time, 12 hour
+    \item[\#] Local Mean Time, 24 hour
+    \item[\#] Universal Time
+    \item[\#] Local Sidereal Time
+    \item[\#] Greenwich Sidereal Time
+\end{itemize}
 
-World Geodetic System (WGS84, rev. 2004) - in the locations.xml file, for example
+Tempus aims to adhere to the following scientific standards:
+
+World Geodetic System (WGS84, EPSG:4326) - in the \texttt{locations.xml} file, for example
