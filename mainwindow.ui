@@ -54,6 +54,7 @@
     <addaction name="separator"/>
     <addaction name="actionLocal_Sidereal_Time"/>
     <addaction name="actionGreenwich_Sidereal_Time"/>
+    <addaction name="separator"/>
    </widget>
    <widget class="QMenu" name="menuChimes">
     <property name="title">
@@ -154,8 +155,30 @@
     <string>About Tempus...</string>
    </property>
   </action>
+  <action name="actionFull_Screen">
+   <property name="text">
+    <string>Full Screen</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>161</x>
+     <y>48</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

@@ -24,3 +24,8 @@ HEADERS  += mainwindow.h \
 FORMS    += mainwindow.ui \
     aboutdialog.ui \
     setlocation.ui
+
+DISTFILES += \
+    resources/chime.ogg \
+    resources/locations.xml \
+    resources/moonStarsClock.jpg

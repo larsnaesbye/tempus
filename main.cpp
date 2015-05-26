@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
 
     app.setApplicationName("Tempus");
-    app.setApplicationVersion("0.1");
+    app.setApplicationVersion("1.0");
     app.setOrganizationDomain("http://github.com/larsnaesbye/tempus");
     app.setOrganizationName("none");
 
