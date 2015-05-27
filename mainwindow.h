@@ -35,6 +35,7 @@ public:
 private:
     Ui::MainWindow *ui;
     void about();
+    void setlocation();
 };
 
 #endif // MAINWINDOW_H

@@ -34,3 +34,8 @@ void MainWindow::about()
 {
 
 }
+
+void MainWindow::setlocation()
+{
+
+}
