@@ -34,6 +34,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    void about();
 };
 
 #endif // MAINWINDOW_H

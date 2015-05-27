@@ -29,3 +29,8 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::about()
+{
+
+}
