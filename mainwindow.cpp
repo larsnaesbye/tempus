@@ -33,7 +33,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::about()
 {
-QSound::play("resources/chime.wav");
+QSound::play(":resources/chime.wav");
 }
 
 void MainWindow::setlocation()
