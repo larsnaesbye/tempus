@@ -43,6 +43,7 @@ void MainWindow::about()
 
 void MainWindow::setlocation()
 {
-    QSound::play(":resources/chime.wav");
+    SetLocation* setlocationdialog = new SetLocation(this);
+    setlocationdialog->show();
 
 }
