@@ -17,6 +17,10 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "aboutdialog.h"
+#include "ui_aboutdialog.h"
+#include "setlocation.h"
+#include "ui_setlocation.h"
 #include <QSound>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -33,10 +37,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::about()
 {
-QSound::play(":resources/chime.wav");
+    AboutDialog* aboutdialog = new AboutDialog(this);
+    aboutdialog->show();
 }
 
 void MainWindow::setlocation()
 {
+    QSound::play(":resources/chime.wav");
 
 }
