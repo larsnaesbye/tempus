@@ -17,6 +17,7 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QSound>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -32,7 +33,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::about()
 {
-
+QSound::play("resources/chime.wav");
 }
 
 void MainWindow::setlocation()
