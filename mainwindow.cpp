@@ -21,7 +21,6 @@
 #include "ui_aboutdialog.h"
 #include "setlocation.h"
 #include "ui_setlocation.h"
-#include <QSound>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
