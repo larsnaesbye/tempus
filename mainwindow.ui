@@ -79,10 +79,16 @@
    <property name="text">
     <string>Exit</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
   </action>
   <action name="actionSet_Location">
    <property name="text">
     <string>Set Location...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
    </property>
   </action>
   <action name="actionLocal_Mean_Time_12_hr_format">
@@ -92,6 +98,9 @@
    <property name="text">
     <string>Local Mean Time (12 hr format)</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+F1</string>
+   </property>
   </action>
   <action name="actionLocal_Mean_Time_24_hr_format">
    <property name="checkable">
@@ -99,6 +108,9 @@
    </property>
    <property name="text">
     <string>Local Mean Time (24 hr format)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F2</string>
    </property>
   </action>
   <action name="actionUniversal_Time">
@@ -108,6 +120,9 @@
    <property name="text">
     <string>Universal Time</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+F3</string>
+   </property>
   </action>
   <action name="actionLocal_Sidereal_Time">
    <property name="checkable">
@@ -116,6 +131,9 @@
    <property name="text">
     <string>Local Sidereal Time</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+F4</string>
+   </property>
   </action>
   <action name="actionGreenwich_Sidereal_Time">
    <property name="checkable">
@@ -123,6 +141,9 @@
    </property>
    <property name="text">
     <string>Greenwich Sidereal Time</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F5</string>
    </property>
   </action>
   <action name="actionNone">
@@ -152,6 +173,9 @@
   <action name="actionAbout_Tempus">
    <property name="text">
     <string>About Tempus...</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
    </property>
   </action>
   <action name="actionFull_Screen">
