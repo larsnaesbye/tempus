@@ -27,6 +27,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    //statusBar = new QStatusBar(this);
+    MainWindow::statusBar()->setStatusTip("Universal Time");
 }
 
 MainWindow::~MainWindow()
