@@ -28,7 +28,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     //statusBar = new QStatusBar(this);
-    MainWindow::statusBar()->setStatusTip("Universal Time");
+    QLabel* statusLabel = new QLabel("Universal Time");
+    //statusLabel->setAlignment(Qt::AlignHCenter);
+    MainWindow::statusBar()->addPermanentWidget(statusLabel);
 }
 
 MainWindow::~MainWindow()
