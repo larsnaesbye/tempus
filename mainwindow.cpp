@@ -22,14 +22,27 @@
 #include "setlocation.h"
 #include "ui_setlocation.h"
 
+#include <iostream>
+#include <string>
+#include <stdio.h>
+#include <time.h>
+
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
-    QLabel* statusLabel = new QLabel("Universal Time");
+time_t  now = time(0);
+struct tm tstruct;
+char buf[80];
+tstruct = *localtime(&now);
+strftime(buf, sizeof(buf), "%Y-%m-%d %X", &tstruct);
 
+
+    QLabel* statusLabel = new QLabel("Universal Time");
+    ui->timeLabel->setText(buf);
     MainWindow::statusBar()->addPermanentWidget(statusLabel);
 }
 
