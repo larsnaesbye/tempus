@@ -36,13 +36,15 @@ MainWindow::MainWindow(QWidget *parent) :
 
 time_t  now = time(0);
 struct tm tstruct;
-char buf[80];
+char textlabel[80];
+char widgetlabel[80];
+
 tstruct = *localtime(&now);
-strftime(buf, sizeof(buf), "%Y-%m-%d %X", &tstruct);
+strftime(textlabel, sizeof(textlabel), "%Y-%m-%d %T", &tstruct);
+strftime(widgetlabel, sizeof(widgetlabel), "UTC %z", &tstruct);
 
-
-    QLabel* statusLabel = new QLabel("Universal Time");
-    ui->timeLabel->setText(buf);
+    QLabel* statusLabel = new QLabel(widgetlabel);
+    ui->timeLabel->setText(textlabel);
     MainWindow::statusBar()->addPermanentWidget(statusLabel);
 }
 
