@@ -27,6 +27,8 @@
 #include <stdio.h>
 #include <time.h>
 
+#include "aaplus/AASidereal.h"
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),

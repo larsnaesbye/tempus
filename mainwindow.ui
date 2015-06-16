@@ -150,7 +150,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Local Mean Time (24 hr format)</string>
+    <string>Local Mean Time</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+2</string>
