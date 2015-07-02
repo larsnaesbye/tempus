@@ -27,6 +27,9 @@
 #include <stdio.h>
 #include <time.h>
 
+#include <QBasicTimer>
+#include <QProcess>
+
 #include "aaplus/AASidereal.h"
 
 
@@ -40,6 +43,9 @@ time_t  now = time(0);
 struct tm tstruct;
 char textlabel[80];
 char widgetlabel[80];
+
+QBasicTimer m_timer; // to tend to our update loop
+QProcess m_process; // the process we wish to have running
 
 tstruct = *localtime(&now);
 strftime(textlabel, sizeof(textlabel), "%Y-%m-%d %T", &tstruct);
