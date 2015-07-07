@@ -27,7 +27,7 @@
 #include <stdio.h>
 #include <time.h>
 
-#include <QBasicTimer>
+#include <QTimer>
 #include <QProcess>
 
 #include "aaplus/AASidereal.h"
@@ -39,21 +39,14 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-time_t  now = time(0);
-struct tm tstruct;
-char textlabel[80];
-char widgetlabel[80];
+// Set up a loop to update the time display
+    QTimer *timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(PrintFormattedTime()));
+    timer->start(1000);
 
-QBasicTimer m_timer; // to tend to our update loop
-QProcess m_process; // the process we wish to have running
+    PrintFormattedTime();
 
-tstruct = *localtime(&now);
-strftime(textlabel, sizeof(textlabel), "%Y-%m-%d %T", &tstruct);
-strftime(widgetlabel, sizeof(widgetlabel), "UTC %z", &tstruct);
-
-    QLabel* statusLabel = new QLabel(widgetlabel);
-    ui->timeLabel->setText(textlabel);
-    MainWindow::statusBar()->addPermanentWidget(statusLabel);
+PrintFormattedTime(); // should be run in loop instead
 }
 
 MainWindow::~MainWindow()
@@ -71,5 +64,16 @@ void MainWindow::setlocation()
 {
     SetLocation* setlocationdialog = new SetLocation(this);
     setlocationdialog->show();
+
+}
+
+void MainWindow::PrintFormattedTime()
+{// This we will call repeatedly every 0.4 seconds or so
+    time_t now = time(0);
+    struct tm tstruct = *localtime(&now);
+    char textlabel[80];
+    strftime(textlabel, sizeof(textlabel), "%Y-%m-%d %T", &tstruct);
+
+    ui->timeLabel->setText(textlabel);
 
 }

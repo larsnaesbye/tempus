@@ -39,6 +39,8 @@ private:
 private slots:
     void about();
     void setlocation();
+    void PrintFormattedTime();
+
 };
 
 #endif // MAINWINDOW_H
