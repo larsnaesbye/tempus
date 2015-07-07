@@ -27,6 +27,7 @@
 #include <stdio.h>
 #include <time.h>
 
+#include <QFont>
 #include <QTimer>
 
 #include "aaplus/AASidereal.h"
@@ -52,11 +53,12 @@ QActionGroup* chimegroup = new QActionGroup( this );
     ui->actionMultiple->setActionGroup(chimegroup);
 
 // Set up a loop to call PrintFormattedTime to update the display
+
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(PrintFormattedTime()));
     timer->start(1000);
 
-    PrintFormattedTime();
+    PrintFormattedTime(); // for good measure, might be unnecessary...
 
 }
 
@@ -87,4 +89,15 @@ void MainWindow::PrintFormattedTime()
 
     ui->timeLabel->setText(textlabel);
 
+}
+
+void MainWindow::resizeEvent(QResizeEvent *event)
+{
+    MainWindow::resizeEvent(event);
+    if(this)
+    {
+    QFont font = ui-> timeLabel->font();
+    font.setPointSize(17); // change to calculated from height
+    timeLabel->setFont(font);
+    }
 }
