@@ -28,7 +28,6 @@
 #include <time.h>
 
 #include <QTimer>
-#include <QProcess>
 
 #include "aaplus/AASidereal.h"
 
@@ -39,14 +38,26 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-// Set up a loop to update the time display
+QActionGroup* timegroup = new QActionGroup( this );
+
+    ui->actionUniversal_Time->setActionGroup(timegroup);
+    ui->actionLocal_Mean_Time_24_hr_format->setActionGroup(timegroup);
+    ui->actionLocal_Sidereal_Time->setActionGroup(timegroup);
+    ui->actionGreenwich_Sidereal_Time->setActionGroup(timegroup);
+
+QActionGroup* chimegroup = new QActionGroup( this );
+
+    ui->actionNone->setActionGroup(chimegroup);
+    ui->actionSingle->setActionGroup(chimegroup);
+    ui->actionMultiple->setActionGroup(chimegroup);
+
+// Set up a loop to call PrintFormattedTime to update the display
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(PrintFormattedTime()));
     timer->start(1000);
 
     PrintFormattedTime();
 
-PrintFormattedTime(); // should be run in loop instead
 }
 
 MainWindow::~MainWindow()
@@ -68,7 +79,7 @@ void MainWindow::setlocation()
 }
 
 void MainWindow::PrintFormattedTime()
-{// This we will call repeatedly every 0.4 seconds or so
+{
     time_t now = time(0);
     struct tm tstruct = *localtime(&now);
     char textlabel[80];
