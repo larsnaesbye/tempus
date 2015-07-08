@@ -39,6 +39,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    // Action Groups for our menus
+
 QActionGroup* timegroup = new QActionGroup( this );
 
     ui->actionUniversal_Time->setActionGroup(timegroup);
@@ -52,14 +54,15 @@ QActionGroup* chimegroup = new QActionGroup( this );
     ui->actionSingle->setActionGroup(chimegroup);
     ui->actionMultiple->setActionGroup(chimegroup);
 
-// Set up a loop to call PrintFormattedTime to update the display
+    //ui->centralWidget->setStyleSheet("background-color: #111133; color: #F0F0F0;");
+
+// Call PrintFormattedTime every second
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(PrintFormattedTime()));
     timer->start(1000);
 
-    PrintFormattedTime(); // for good measure, might be unnecessary...
-
+    PrintFormattedTime();
 }
 
 MainWindow::~MainWindow()
@@ -77,7 +80,6 @@ void MainWindow::setlocation()
 {
     SetLocation* setlocationdialog = new SetLocation(this);
     setlocationdialog->show();
-
 }
 
 void MainWindow::PrintFormattedTime()
@@ -93,11 +95,12 @@ void MainWindow::PrintFormattedTime()
 
 void MainWindow::resizeEvent(QResizeEvent *event)
 {
-    MainWindow::resizeEvent(event);
+    QMainWindow::resizeEvent(event);
     if(this)
     {
-    QFont font = ui-> timeLabel->font();
-    font.setPointSize(17); // change to calculated from height
-    timeLabel->setFont(font);
+    QFont font = ui->timeLabel->font();
+    int size = ((ui->centralWidget->geometry().width()+ui->centralWidget->geometry().height()))/20;
+    font.setPointSize(size);
+    ui->timeLabel->setFont(font);
     }
 }
