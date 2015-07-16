@@ -54,8 +54,6 @@ QActionGroup* chimegroup = new QActionGroup( this );
     ui->actionSingle->setActionGroup(chimegroup);
     ui->actionMultiple->setActionGroup(chimegroup);
 
-    //ui->centralWidget->setStyleSheet("background-color: #111133; color: #F0F0F0;");
-
 // Call PrintFormattedTime every second
 
     QTimer *timer = new QTimer(this);
@@ -90,6 +88,8 @@ void MainWindow::PrintFormattedTime()
     strftime(textlabel, sizeof(textlabel), "%Y-%m-%d %T", &tstruct);
 
     ui->timeLabel->setText(textlabel);
+
+    // if seconds = 0 && chime != none, do chime
 
 }
 
