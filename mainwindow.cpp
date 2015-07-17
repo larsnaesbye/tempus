@@ -28,7 +28,10 @@
 #include <time.h>
 
 #include <QFont>
+#include <QMediaPlayer>
+#include <QSoundEffect>
 #include <QTimer>
+#include <QUrl>
 
 #include "aaplus/AASidereal.h"
 
@@ -54,7 +57,7 @@ QActionGroup* chimegroup = new QActionGroup( this );
     ui->actionSingle->setActionGroup(chimegroup);
     ui->actionMultiple->setActionGroup(chimegroup);
 
-// Call PrintFormattedTime every second
+// Call PrintFormattedTime every 1000 ms = 1 sec
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(PrintFormattedTime()));
@@ -89,8 +92,16 @@ void MainWindow::PrintFormattedTime()
 
     ui->timeLabel->setText(textlabel);
 
-    // if seconds = 0 && chime != none, do chime
+    ChimeOnce(); // TODO:if seconds = 0 && chime != none, do chime
+}
 
+void MainWindow::ChimeOnce()
+{
+    QSoundEffect player;
+    player.setSource(QUrl::fromLocalFile("/resources/chime.wav"));
+    player.setLoopCount(1);
+    player.setVolume(1.0f);
+    player.play();
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event)

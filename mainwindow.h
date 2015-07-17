@@ -43,6 +43,7 @@ private slots:
     void about();
     void setlocation();
     void PrintFormattedTime();
+    void ChimeOnce();
 
 };
 
