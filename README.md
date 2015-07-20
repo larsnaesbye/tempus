@@ -1,2 +1,2 @@
 # Tempus
-- a Qt-based astronomy timekeeper
+- a Qt-based astronomy timekeeper in the making.

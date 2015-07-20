@@ -33,9 +33,6 @@
 #include <QTimer>
 #include <QUrl>
 
-#include "aaplus/AASidereal.h"
-
-
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
