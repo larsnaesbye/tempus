@@ -54,6 +54,10 @@ QActionGroup* chimegroup = new QActionGroup( this );
     ui->actionSingle->setActionGroup(chimegroup);
     ui->actionMultiple->setActionGroup(chimegroup);
 
+ui->systemlabel->setText("Local Time");
+
+    ChimeOnce(); // here until we get it fixed, then it goes into the loop.
+
 // Call PrintFormattedTime every 1000 ms = 1 sec
 
     QTimer *timer = new QTimer(this);
@@ -89,7 +93,7 @@ void MainWindow::PrintFormattedTime()
 
     ui->timeLabel->setText(textlabel);
 
-    ChimeOnce(); // TODO:if seconds = 0 && chime != none, do chime
+    //ChimeOnce(); // TODO:if seconds = 0 && chime != none, do chime
 }
 
 void MainWindow::ChimeOnce()
