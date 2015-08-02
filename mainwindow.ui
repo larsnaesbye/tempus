@@ -63,7 +63,7 @@
       <property name="font">
        <font>
         <family>Ubuntu Mono</family>
-        <pointsize>9</pointsize>
+        <pointsize>10</pointsize>
        </font>
       </property>
       <property name="text">

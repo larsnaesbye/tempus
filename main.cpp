@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
     app.setApplicationName("Tempus");
     app.setApplicationVersion("1.0");
-    app.setOrganizationDomain("http://github.com/larsnaesbye/tempus");
+    app.setOrganizationDomain("http://larsnaesbye.github.io/tempus");
     app.setOrganizationName("Lars Næsbye Christensen");
 
     MainWindow w;
