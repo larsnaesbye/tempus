@@ -83,7 +83,6 @@ void MainWindow::setlocation()
     SetLocation* setlocationdialog = new SetLocation(this);
     setlocationdialog->show();
 
-    ChimeOnce(); // our test trigger for the damn sound
 }
 
 void MainWindow::PrintFormattedTime()
@@ -91,7 +90,7 @@ void MainWindow::PrintFormattedTime()
 
     ui->timeLabel->setText(QDateTime::currentDateTimeUtc().time().toString());
 
-    //ChimeOnce(); // TODO:if seconds = 0 && chime != none, do chime
+    // TODO:if seconds = 0 && chime != none, run chime
 }
 
 void MainWindow::ChimeOnce()
