@@ -29,9 +29,7 @@
 
 #include <QDateTime>
 #include <QFont>
-#include <QMediaPlayer>
 #include <QSound>
-#include <QSoundEffect>
 #include <QTimer>
 #include <QUrl>
 
@@ -82,8 +80,9 @@ void MainWindow::about()
 
 void MainWindow::setlocation()
 {
-    /*SetLocation* setlocationdialog = new SetLocation(this);
-    setlocationdialog->show();*/
+    SetLocation* setlocationdialog = new SetLocation(this);
+    setlocationdialog->show();
+
     ChimeOnce(); // our test trigger for the damn sound
 }
 
@@ -97,14 +96,7 @@ void MainWindow::PrintFormattedTime()
 
 void MainWindow::ChimeOnce()
 {
-    /*QSoundEffect player;
-    player.setSource(QUrl::fromLocalFile(":/resources/chime.wav"));
-    player.setLoopCount(1);
-    player.setVolume(1.0f);
-    player.play();*/
-    QSound chime("resources/chime.wav");
-    chime.play();
-
+    QSound::play("resources/chime.wav");
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event)
