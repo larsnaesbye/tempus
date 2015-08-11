@@ -73,7 +73,8 @@ SOURCES += main.cpp\
     aaplus/AASun.cpp \
     aaplus/AAUranus.cpp \
     aaplus/AAVenus.cpp \
-    aaplus/stdafx.cpp
+    aaplus/stdafx.cpp \
+    settings.cpp
 
 HEADERS  += mainwindow.h \
     aboutdialog.h \
@@ -138,7 +139,8 @@ HEADERS  += mainwindow.h \
     aaplus/AASun.h \
     aaplus/AAUranus.h \
     aaplus/AAVenus.h \
-    aaplus/stdafx.h
+    aaplus/stdafx.h \
+    settings.h
 
 FORMS    += mainwindow.ui \
     aboutdialog.ui \

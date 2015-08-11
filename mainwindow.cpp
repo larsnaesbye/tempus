@@ -16,6 +16,7 @@
 **/
 
 #include "mainwindow.h"
+#include "settings.h"
 #include "ui_mainwindow.h"
 #include "aboutdialog.h"
 #include "ui_aboutdialog.h"
@@ -55,8 +56,6 @@ QActionGroup* chimegroup = new QActionGroup( this );
     ui->actionMultiple->setActionGroup(chimegroup);
 
 ui->systemlabel->setText("Universal Time, Coordinated");
-
-    ChimeOnce(); // here until we get it fixed, then it goes into the loop.
 
 // Call PrintFormattedTime every 1000 ms = 1 sec
 
