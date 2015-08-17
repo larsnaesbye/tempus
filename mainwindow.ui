@@ -23,8 +23,8 @@
    <string>Tempus</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resources.qrc">
-    <normaloff>:/resources/moonStarsClock.jpg</normaloff>:/resources/moonStarsClock.jpg</iconset>
+   <iconset>
+    <normaloff>resources/moonStarsClock.jpg</normaloff>resources/moonStarsClock.jpg</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -173,8 +173,11 @@
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
    <property name="text">
-    <string>Universal Time</string>
+    <string>Universal Time, Coordinated</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+U</string>
@@ -204,6 +207,9 @@
   </action>
   <action name="actionNone">
    <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
     <bool>true</bool>
    </property>
    <property name="text">
@@ -250,9 +256,7 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="resources.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>actionExit</sender>
