@@ -32,7 +32,6 @@
 #include <QFont>
 #include <QSound>
 #include <QTimer>
-#include <QUrl>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -89,7 +88,10 @@ void MainWindow::PrintFormattedTime()
 
     ui->timeLabel->setText(QDateTime::currentDateTimeUtc().time().toString());
 
-    // TODO:if seconds = 0 && chime != none, run chime
+    if (tempussettings.chime == true)
+        {
+        ChimeOnce();
+        }
 }
 
 void MainWindow::ChimeOnce()
@@ -98,7 +100,7 @@ void MainWindow::ChimeOnce()
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event)
-{
+{ // Overriding resize to scale font sizes accordingly
     QMainWindow::resizeEvent(event);
     if(this)
     {

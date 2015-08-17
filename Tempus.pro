@@ -146,5 +146,4 @@ FORMS    += mainwindow.ui \
     aboutdialog.ui \
     setlocation.ui
 
-RESOURCES += \
-    resources.qrc
+RESOURCES +=

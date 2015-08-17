@@ -1,7 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>resources/chime.wav</file>
-        <file>resources/locations.xml</file>
-        <file>resources/moonStarsClock.jpg</file>
-    </qresource>
-</RCC>

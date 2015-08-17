@@ -17,9 +17,10 @@
 
 #include "settings.h"
 
+
 Settings::Settings()
 {
-
+    chime = false;
 }
 
 Settings::~Settings()

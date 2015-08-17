@@ -22,12 +22,12 @@
 class Settings
 {
 public:
+    bool chime ; // do we chime on the hour?
+    int timesystem [4];
+
     Settings();
     ~Settings();
 
-private:
-bool chime; // do we chime on the hour?
-int timesystem [4];
 };
 
 #endif // SETTINGS_H
