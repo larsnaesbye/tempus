@@ -47,6 +47,7 @@ private:
 private slots:
     void about();
     void setlocation();
+    void UpdateTimeSystemLabel();
     QDateTime GetTime();
     void PrintFormattedTime();
     void ChimeOnce();

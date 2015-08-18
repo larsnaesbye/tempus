@@ -54,7 +54,6 @@ QActionGroup* chimegroup = new QActionGroup( this );
     ui->actionSingle->setActionGroup(chimegroup);
     ui->actionMultiple->setActionGroup(chimegroup);
 
-ui->systemlabel->setText("Universal Time, Coordinated");
 
 // Call PrintFormattedTime every 1000 ms = 1 sec
 
@@ -85,8 +84,18 @@ void MainWindow::setlocation()
 
 QDateTime MainWindow::GetTime()
 {
-    switch (tempussettings.timesystem)
+    switch (tempussettings.timesystem) {
+    case 0:     return QDateTime::currentDateTime();
     default:    return QDateTime::currentDateTimeUtc();
+    }
+}
+
+void MainWindow::UpdateTimeSystemLabel() {
+
+    QString labels[2]= {"Local Time","Universal Time, Coordinated"};
+    ui->systemlabel->setText(labels[tempussettings.timesystem]);
+    //ui->systemlabel->setText("Universal Time, Coordinated");
+
 }
 
 void MainWindow::PrintFormattedTime()
@@ -94,12 +103,15 @@ void MainWindow::PrintFormattedTime()
     QDateTime ourDateTime = GetTime();
     QTime ourTime = ourDateTime.time();
 
-    ui->timeLabel->setText(ourTime.toString());
-
     if (tempussettings.chime > 1 && ourTime.hour() == 0 && ourTime.second()==0)
         {
         ChimeOnce();
         }
+
+
+    ui->timeLabel->setText(ourTime.toString());
+
+    UpdateTimeSystemLabel();
 }
 
 void MainWindow::ChimeOnce()
