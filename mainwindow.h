@@ -20,6 +20,7 @@
 
 #include <QMainWindow>
 #include <QStatusBar>
+#include <QDateTime>
 
 #include "settings.h"
 
@@ -46,6 +47,7 @@ private:
 private slots:
     void about();
     void setlocation();
+    QDateTime GetTime();
     void PrintFormattedTime();
     void ChimeOnce();
 

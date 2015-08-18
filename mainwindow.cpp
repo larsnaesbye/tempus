@@ -83,13 +83,20 @@ void MainWindow::setlocation()
 
 }
 
+QDateTime MainWindow::GetTime()
+{
+    switch (tempussettings.timesystem)
+    default:    return QDateTime::currentDateTimeUtc();
+}
+
 void MainWindow::PrintFormattedTime()
 {
-QDateTime ourDateTime = QDateTime::currentDateTimeUtc();
-QTime ourTime = ourDateTime.time();
+    QDateTime ourDateTime = GetTime();
+    QTime ourTime = ourDateTime.time();
+
     ui->timeLabel->setText(ourTime.toString());
 
-    if (tempussettings.chime == 1 && ourTime.hour() == 0 && ourTime.second()==0)
+    if (tempussettings.chime > 1 && ourTime.hour() == 0 && ourTime.second()==0)
         {
         ChimeOnce();
         }
