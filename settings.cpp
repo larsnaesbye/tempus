@@ -20,7 +20,7 @@
 
 Settings::Settings()
 {
-    chime = false;
+    chime = true;
 }
 
 Settings::~Settings()

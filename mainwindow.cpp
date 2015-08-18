@@ -85,10 +85,11 @@ void MainWindow::setlocation()
 
 void MainWindow::PrintFormattedTime()
 {
+QDateTime ourDateTime = QDateTime::currentDateTimeUtc();
+QTime ourTime = ourDateTime.time();
+    ui->timeLabel->setText(ourTime.toString());
 
-    ui->timeLabel->setText(QDateTime::currentDateTimeUtc().time().toString());
-
-    if (tempussettings.chime == true)
+    if (tempussettings.chime && ourTime.hour == 0 && Time.second()==0)
         {
         ChimeOnce();
         }
