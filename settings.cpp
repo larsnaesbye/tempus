@@ -20,7 +20,8 @@
 
 Settings::Settings()
 {
-    chime = true;
+    chime = 1;
+    timesystem = 1;
 }
 
 Settings::~Settings()

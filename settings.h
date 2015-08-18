@@ -22,8 +22,8 @@
 class Settings
 {
 public:
-    bool chime ; // do we chime on the hour?
-    int timesystem [4];
+    int chime ; // chiming options: 0 - off, 1 - once on hour, 2 - multiple on hour
+    int timesystem; // 1 - UTC
 
     Settings();
     ~Settings();

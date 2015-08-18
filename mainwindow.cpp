@@ -89,7 +89,7 @@ QDateTime ourDateTime = QDateTime::currentDateTimeUtc();
 QTime ourTime = ourDateTime.time();
     ui->timeLabel->setText(ourTime.toString());
 
-    if (tempussettings.chime && ourTime.hour == 0 && Time.second()==0)
+    if (tempussettings.chime == 1 && ourTime.hour() == 0 && ourTime.second()==0)
         {
         ChimeOnce();
         }
@@ -101,7 +101,7 @@ void MainWindow::ChimeOnce()
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event)
-{ // Overriding resize to scale font sizes accordingly
+{ // Overriding resize to scale label font size accordingly
     QMainWindow::resizeEvent(event);
     if(this)
     {
