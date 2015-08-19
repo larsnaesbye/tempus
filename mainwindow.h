@@ -51,7 +51,7 @@ private slots:
     QDateTime GetTime();
     void PrintFormattedTime();
     void ChimeOnce();
-
+    void setutc();
 };
 
 #endif // MAINWINDOW_H

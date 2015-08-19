@@ -82,6 +82,10 @@ void MainWindow::setlocation()
 
 }
 
+void MainWindow::setutc() {
+
+}
+
 QDateTime MainWindow::GetTime()
 {
     switch (tempussettings.timesystem) {
@@ -94,7 +98,6 @@ void MainWindow::UpdateTimeSystemLabel() {
 
     QString labels[2]= {"Local Time","Universal Time, Coordinated"};
     ui->systemlabel->setText(labels[tempussettings.timesystem]);
-    //ui->systemlabel->setText("Universal Time, Coordinated");
 
 }
 
