@@ -24,7 +24,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>resources/moonStarsClock.jpg</normaloff>resources/moonStarsClock.jpg</iconset>
+    <normaloff>resources/tempus.svg</normaloff>resources/tempus.svg</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>

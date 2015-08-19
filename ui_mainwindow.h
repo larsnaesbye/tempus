@@ -57,7 +57,7 @@ public:
         MainWindow->setMinimumSize(QSize(350, 100));
         MainWindow->setCursor(QCursor(Qt::ArrowCursor));
         QIcon icon;
-        icon.addFile(QStringLiteral("resources/moonStarsClock.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QStringLiteral("resources/tempus.svg"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
         MainWindow->setAutoFillBackground(false);
         MainWindow->setStyleSheet(QStringLiteral("background-color: #111133; color: #F0F0F0;"));
