@@ -21,7 +21,7 @@
 Settings::Settings()
 {
     chime = 1;
-    timesystem = 1;
+    timesystem = 0;
 }
 
 Settings::~Settings()

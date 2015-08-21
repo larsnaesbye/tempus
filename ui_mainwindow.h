@@ -151,10 +151,8 @@ public:
         menuLocation->addAction(actionSet_Location);
         menuTime->addAction(actionUniversal_Time);
         menuTime->addAction(actionLocal_Mean_Time_24_hr_format);
-        menuTime->addSeparator();
         menuTime->addAction(actionLocal_Sidereal_Time);
         menuTime->addAction(actionGreenwich_Sidereal_Time);
-        menuTime->addSeparator();
         menuChimes->addAction(actionNone);
         menuChimes->addAction(actionSingle);
         menuChimes->addAction(actionMultiple);

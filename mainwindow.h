@@ -52,6 +52,8 @@ public slots:
     void PrintFormattedTime();
     void ChimeOnce();
     void setutc();
+    void setlocal();
+
 };
 
 #endif // MAINWINDOW_H

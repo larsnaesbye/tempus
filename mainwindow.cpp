@@ -39,6 +39,10 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    // add more signals and slots
+    connect(ui->actionUniversal_Time, SIGNAL(triggered()), this, SLOT(setutc()));
+    connect(ui->actionLocal_Mean_Time_24_hr_format, SIGNAL(triggered()), this, SLOT(setlocal()));
+
     // Action Groups for our menus
 
 QActionGroup* timegroup = new QActionGroup( this );
@@ -84,9 +88,12 @@ void MainWindow::setlocation()
 
 void MainWindow::setutc()
 {
-
+tempussettings.timesystem = 1;
 }
-
+void MainWindow::setlocal()
+{
+tempussettings.timesystem = 0;
+}
 QDateTime MainWindow::GetTime()
 {
     switch (tempussettings.timesystem) {
