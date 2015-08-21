@@ -44,7 +44,7 @@ protected:
 private:
     Ui::MainWindow *ui;
 
-private slots:
+public slots:
     void about();
     void setlocation();
     void UpdateTimeSystemLabel();

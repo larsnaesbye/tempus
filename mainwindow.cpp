@@ -82,7 +82,8 @@ void MainWindow::setlocation()
 
 }
 
-void MainWindow::setutc() {
+void MainWindow::setutc()
+{
 
 }
 

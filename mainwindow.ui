@@ -106,10 +106,8 @@
     </property>
     <addaction name="actionUniversal_Time"/>
     <addaction name="actionLocal_Mean_Time_24_hr_format"/>
-    <addaction name="separator"/>
     <addaction name="actionLocal_Sidereal_Time"/>
     <addaction name="actionGreenwich_Sidereal_Time"/>
-    <addaction name="separator"/>
    </widget>
    <widget class="QMenu" name="menuChimes">
     <property name="title">
