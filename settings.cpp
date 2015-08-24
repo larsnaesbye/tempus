@@ -20,8 +20,8 @@
 
 Settings::Settings()
 {
-    chime = 1;
-    timesystem = 0;
+    chime = 1; // chime on the hour
+    timesystem = 0; // local time
 }
 
 Settings::~Settings()

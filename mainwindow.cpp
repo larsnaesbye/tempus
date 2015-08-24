@@ -39,27 +39,27 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    // add more signals and slots
+    // Signals and slots for non-ui receivers
     connect(ui->actionUniversal_Time, SIGNAL(triggered()), this, SLOT(setutc()));
     connect(ui->actionLocal_Mean_Time_24_hr_format, SIGNAL(triggered()), this, SLOT(setlocal()));
 
     // Action Groups for our menus
 
-QActionGroup* timegroup = new QActionGroup( this );
+    QActionGroup* timegroup = new QActionGroup( this );
 
     ui->actionUniversal_Time->setActionGroup(timegroup);
     ui->actionLocal_Mean_Time_24_hr_format->setActionGroup(timegroup);
     ui->actionLocal_Sidereal_Time->setActionGroup(timegroup);
     ui->actionGreenwich_Sidereal_Time->setActionGroup(timegroup);
 
-QActionGroup* chimegroup = new QActionGroup( this );
+    QActionGroup* chimegroup = new QActionGroup( this );
 
     ui->actionNone->setActionGroup(chimegroup);
     ui->actionSingle->setActionGroup(chimegroup);
     ui->actionMultiple->setActionGroup(chimegroup);
 
 
-// Call PrintFormattedTime every 1000 ms = 1 sec
+    // Call PrintFormattedTime every 1000 ms = 1 sec
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(PrintFormattedTime()));
@@ -88,12 +88,13 @@ void MainWindow::setlocation()
 
 void MainWindow::setutc()
 {
-tempussettings.timesystem = 1;
+    tempussettings.timesystem = 1;
 }
 void MainWindow::setlocal()
 {
-tempussettings.timesystem = 0;
+    tempussettings.timesystem = 0;
 }
+
 QDateTime MainWindow::GetTime()
 {
     switch (tempussettings.timesystem) {
@@ -114,10 +115,10 @@ void MainWindow::PrintFormattedTime()
     QDateTime ourDateTime = GetTime();
     QTime ourTime = ourDateTime.time();
 
-    if (tempussettings.chime > 1 && ourTime.hour() == 0 && ourTime.second()==0)
-        {
+    if (tempussettings.chime > 1 && ourTime.hour() == 0 && ourTime.second() == 0)
+    {
         ChimeOnce();
-        }
+    }
 
 
     ui->timeLabel->setText(ourTime.toString());
@@ -135,9 +136,9 @@ void MainWindow::resizeEvent(QResizeEvent *event)
     QMainWindow::resizeEvent(event);
     if(this)
     {
-    QFont font = ui->timeLabel->font();
-    int size = ((ui->centralWidget->geometry().width()+ui->centralWidget->geometry().height()))/20;
-    font.setPointSize(size);
-    ui->timeLabel->setFont(font);
+        QFont font = ui->timeLabel->font();
+        int size = ((ui->centralWidget->geometry().width()+ui->centralWidget->geometry().height()))/20;
+        font.setPointSize(size);
+        ui->timeLabel->setFont(font);
     }
 }
