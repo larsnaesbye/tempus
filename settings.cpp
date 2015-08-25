@@ -21,7 +21,7 @@
 Settings::Settings()
 {
     chime = 1; // chime on the hour
-    timesystem = 0; // local time
+    timesystem = 1; // UTC as standard
 }
 
 Settings::~Settings()

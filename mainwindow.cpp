@@ -40,6 +40,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     // Signals and slots for non-ui receivers
+
     connect(ui->actionUniversal_Time, SIGNAL(triggered()), this, SLOT(setutc()));
     connect(ui->actionLocal_Mean_Time_24_hr_format, SIGNAL(triggered()), this, SLOT(setlocal()));
 
@@ -105,7 +106,7 @@ QDateTime MainWindow::GetTime()
 
 void MainWindow::UpdateTimeSystemLabel() {
 
-    QString labels[2]= {"Local Time","Universal Time, Coordinated"};
+    QString labels[4]= {"Local Time","Universal Time, Coordinated", "Greenwich Mean Sidereal Time", "Local Sidereal Time"};
     ui->systemlabel->setText(labels[tempussettings.timesystem]);
 
 }
@@ -115,7 +116,7 @@ void MainWindow::PrintFormattedTime()
     QDateTime ourDateTime = GetTime();
     QTime ourTime = ourDateTime.time();
 
-    if (tempussettings.chime > 1 && ourTime.hour() == 0 && ourTime.second() == 0)
+    if (tempussettings.chime == 1 && ourTime.hour() == 0 && ourTime.second() == 0)
     {
         ChimeOnce();
     }

@@ -16,8 +16,9 @@
 **/
 
 #include "mainwindow.h"
-#include <QApplication>
 #include "settings.h"
+
+#include <QApplication>
 
 int main(int argc, char *argv[])
 {
