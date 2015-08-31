@@ -133,7 +133,7 @@ void MainWindow::ChimeOnce()
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event)
-{ // Overriding resize to scale label font size accordingly
+{ // TODO: set font size better if resizing is unidirectional
     QMainWindow::resizeEvent(event);
     if(this)
     {
