@@ -106,7 +106,13 @@ QDateTime MainWindow::GetTime()
 
 void MainWindow::UpdateTimeSystemLabel() {
 
-    QString labels[4]= {"Local Time","Universal Time, Coordinated", "Greenwich Mean Sidereal Time", "Local Sidereal Time"};
+    QString labels[5]= {
+        "Local Mean Time",
+        "Universal Time, Coordinated",
+        "Greenwich Mean Sidereal Time",
+        "Local Sidereal Time",
+        "Julian Day"
+    };
     ui->systemlabel->setText(labels[tempussettings.timesystem]);
 
 }
