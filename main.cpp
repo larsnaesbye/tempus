@@ -29,6 +29,7 @@ int main(int argc, char *argv[])
     app.setApplicationDisplayName("Astronomy Clock");
     app.setOrganizationDomain("https://larsnaesbye.github.io/tempus");
     app.setOrganizationName("Lars Næsbye Christensen");
+    app.setDesktopSettingsAware(false);
     app.setEffectEnabled(Qt::UI_FadeMenu, true);
     app.setEffectEnabled(Qt::UI_AnimateMenu, true);
     app.setEffectEnabled(Qt::UI_AnimateCombo, true);

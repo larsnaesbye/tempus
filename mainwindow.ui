@@ -106,8 +106,11 @@
     </property>
     <addaction name="actionUniversal_Time"/>
     <addaction name="actionLocal_Mean_Time_24_hr_format"/>
-    <addaction name="actionLocal_Sidereal_Time"/>
+    <addaction name="actionGreenwich_Apparent_Sidereal_Time"/>
     <addaction name="actionGreenwich_Sidereal_Time"/>
+    <addaction name="actionLocal_Sidereal_Time"/>
+    <addaction name="actionLocal_Mean_Sidereal_Time"/>
+    <addaction name="actionJulian_Day"/>
    </widget>
    <widget class="QMenu" name="menuChimes">
     <property name="title">
@@ -186,7 +189,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Local Sidereal Time</string>
+    <string>Local Apparent Sidereal Time</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+S</string>
@@ -197,7 +200,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Greenwich Sidereal Time</string>
+    <string>Greenwich Mean Sidereal Time</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+G</string>
@@ -239,7 +242,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Multiple</string>
+    <string>Multiple on the hour</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+2</string>
@@ -256,6 +259,27 @@
   <action name="actionFull_Screen">
    <property name="text">
     <string>Full Screen</string>
+   </property>
+  </action>
+  <action name="actionJulian_Day">
+   <property name="text">
+    <string>Julian Day</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+J</string>
+   </property>
+  </action>
+  <action name="actionGreenwich_Apparent_Sidereal_Time">
+   <property name="text">
+    <string>Greenwich Apparent Sidereal Time</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionLocal_Mean_Sidereal_Time">
+   <property name="text">
+    <string>Local Mean Sidereal Time</string>
    </property>
   </action>
  </widget>

@@ -20,8 +20,9 @@
 
 Settings::Settings()
 {
-    chime = 1; // chime on the hour
-    timesystem = 1; // UTC as standard
+    //set defaults
+    chime = 1; // chime once on the hour
+    timesystem = 1; // UTC
 }
 
 Settings::~Settings()

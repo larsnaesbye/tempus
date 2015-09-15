@@ -24,8 +24,8 @@
 #include "ui_setlocation.h"
 
 #include <iostream>
-#include <string>
 #include <stdio.h>
+#include <string>
 #include <time.h>
 
 #include <QDateTime>
@@ -100,8 +100,13 @@ QDateTime MainWindow::GetTime()
 {
     switch (tempussettings.timesystem) {
     case 0:     return QDateTime::currentDateTime();
-    default:    return QDateTime::currentDateTimeUtc();
+    case 1:     return QDateTime::currentDateTimeUtc();
+    default:    return QDateTime::currentDateTime(); //so we at least return something
     }
+}
+
+QDateTime MainWindow::GMST() {
+
 }
 
 void MainWindow::UpdateTimeSystemLabel() {
@@ -113,6 +118,7 @@ void MainWindow::UpdateTimeSystemLabel() {
         "Local Sidereal Time",
         "Julian Day"
     };
+
     ui->systemlabel->setText(labels[tempussettings.timesystem]);
 
 }
@@ -133,13 +139,14 @@ void MainWindow::PrintFormattedTime()
     UpdateTimeSystemLabel();
 }
 
+
 void MainWindow::ChimeOnce()
 {
     QSound::play("resources/chime.wav");
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event)
-{ // TODO: set font size better if resizing is unidirectional
+{
     QMainWindow::resizeEvent(event);
     if(this)
     {
