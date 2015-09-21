@@ -209,6 +209,7 @@ public:
         actionJulian_Day->setText(QApplication::translate("MainWindow", "Julian Day", 0));
         actionJulian_Day->setShortcut(QApplication::translate("MainWindow", "Ctrl+J", 0));
         actionGreenwich_Apparent_Sidereal_Time->setText(QApplication::translate("MainWindow", "Greenwich Apparent Sidereal Time", 0));
+        actionGreenwich_Apparent_Sidereal_Time->setShortcut(QApplication::translate("MainWindow", "Ctrl+A", 0));
         actionLocal_Mean_Sidereal_Time->setText(QApplication::translate("MainWindow", "Local Mean Sidereal Time", 0));
         timeLabel->setText(QApplication::translate("MainWindow", "TimeLabel", 0));
         systemlabel->setText(QApplication::translate("MainWindow", "TextLabel", 0));
