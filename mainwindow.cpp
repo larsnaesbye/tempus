@@ -43,6 +43,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(ui->actionUniversal_Time, SIGNAL(triggered()), this, SLOT(setutc()));
     connect(ui->actionLocal_Mean_Time_24_hr_format, SIGNAL(triggered()), this, SLOT(setlocal()));
+    connect(ui->actionJulian_Day, SIGNAL(triggered()), this, SLOT(setjd()));
 
     // Action Groups for our menus
 
@@ -120,7 +121,7 @@ QString MainWindow::GetTimeString()
     case 1:     return QDateTime::currentDateTimeUtc().toString();
     case 2:     return MainWindow::GMST().toString();
     case 3:     return MainWindow::LST().toString();
-    case 4:     return QString::number(MainWindow::JulianDay());
+    case 4:     return QString::number(MainWindow::JulianDay(), 'f',1);
     default:    return QDateTime::currentDateTime().toString(); //so we at least return something
     }
 }
