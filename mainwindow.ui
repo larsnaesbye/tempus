@@ -111,14 +111,7 @@
     <addaction name="actionLocal_Sidereal_Time"/>
     <addaction name="actionLocal_Mean_Sidereal_Time"/>
     <addaction name="actionJulian_Day"/>
-   </widget>
-   <widget class="QMenu" name="menuChimes">
-    <property name="title">
-     <string>Chimes</string>
-    </property>
-    <addaction name="actionNone"/>
-    <addaction name="actionSingle"/>
-    <addaction name="actionMultiple"/>
+    <addaction name="actionJulian_Day_Modified"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -129,7 +122,6 @@
    <addaction name="menuFile"/>
    <addaction name="menuLocation"/>
    <addaction name="menuTime"/>
-   <addaction name="menuChimes"/>
    <addaction name="menuHelp"/>
   </widget>
   <action name="actionExit">
@@ -280,6 +272,11 @@
   <action name="actionLocal_Mean_Sidereal_Time">
    <property name="text">
     <string>Local Mean Sidereal Time</string>
+   </property>
+  </action>
+  <action name="actionJulian_Day_Modified">
+   <property name="text">
+    <string>Julian Day, Modified</string>
    </property>
   </action>
  </widget>

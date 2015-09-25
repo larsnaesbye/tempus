@@ -52,6 +52,7 @@ public slots:
     QDateTime GMST();
     QDateTime LST();
     double JulianDay();
+    double JulianDayModified();
     void PrintFormattedTime();
     void ChimeOnce();
     void setutc();
@@ -59,6 +60,7 @@ public slots:
     void setgmst();
     void setlst();
     void setjd();
+    void setjdm();
 
 };
 

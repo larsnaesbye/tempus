@@ -44,6 +44,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->actionUniversal_Time, SIGNAL(triggered()), this, SLOT(setutc()));
     connect(ui->actionLocal_Mean_Time_24_hr_format, SIGNAL(triggered()), this, SLOT(setlocal()));
     connect(ui->actionJulian_Day, SIGNAL(triggered()), this, SLOT(setjd()));
+    connect(ui->actionJulian_Day_Modified, SIGNAL(triggered()), this, SLOT(setjdm()));
 
     // Action Groups for our menus
 
@@ -53,13 +54,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->actionLocal_Mean_Time_24_hr_format->setActionGroup(timegroup);
     ui->actionLocal_Sidereal_Time->setActionGroup(timegroup);
     ui->actionGreenwich_Sidereal_Time->setActionGroup(timegroup);
-
-    QActionGroup* chimegroup = new QActionGroup( this );
-
-    ui->actionNone->setActionGroup(chimegroup);
-    ui->actionSingle->setActionGroup(chimegroup);
-    ui->actionMultiple->setActionGroup(chimegroup);
-
+    ui->actionGreenwich_Apparent_Sidereal_Time->setActionGroup(timegroup);
+    ui->actionJulian_Day->setActionGroup(timegroup);
+    ui->actionJulian_Day_Modified->setActionGroup(timegroup);
 
     // Call PrintFormattedTime every 1000 ms = 1 sec
 
@@ -114,6 +111,11 @@ void MainWindow::setjd()
     tempussettings.timesystem = 4;
 }
 
+void MainWindow::setjdm()
+{
+    tempussettings.timesystem = 5;
+}
+
 QString MainWindow::GetTimeString()
 {
     switch (tempussettings.timesystem) {
@@ -122,6 +124,7 @@ QString MainWindow::GetTimeString()
     case 2:     return MainWindow::GMST().toString();
     case 3:     return MainWindow::LST().toString();
     case 4:     return QString::number(MainWindow::JulianDay(), 'f',1);
+    case 5:     return QString::number(MainWindow::JulianDayModified(), 'f',1);
     default:    return QDateTime::currentDateTime().toString(); //so we at least return something
     }
 }
@@ -142,7 +145,7 @@ QDateTime MainWindow::LST() {
 
 double MainWindow::JulianDay() {
 
-    QDate JD = QDate::currentDate(); // replace
+    QDate JD = QDate::currentDate();
     int A = JD.year()/100;
     int B = A/4;
     int C = 2-A+B;
@@ -152,14 +155,27 @@ double MainWindow::JulianDay() {
 
 }
 
+double MainWindow::JulianDayModified() {
+
+    QDate JD = QDate::currentDate();
+    int A = JD.year()/100;
+    int B = A/4;
+    int C = 2-A+B;
+    int E = 362.25*(JD.year()+4716);
+    int F = 30.6001*(JD.month()+1);
+    return C+JD.day()+E+F-1524.5-2400000.5;
+
+}
+
 void MainWindow::UpdateTimeSystemLabel() {
 
-    QString labels[5]= {
+    QString labels[6]= {
         "Local Mean Time",
         "Universal Time, Coordinated",
         "Greenwich Mean Sidereal Time",
         "Local Sidereal Time",
-        "Julian Day"
+        "Julian Day",
+        "Julian Day, Modified"
     };
 
     ui->systemlabel->setText(labels[tempussettings.timesystem]);
@@ -185,7 +201,7 @@ void MainWindow::resizeEvent(QResizeEvent *event)
     if(this)
     {
         QFont font = ui->timeLabel->font();
-        int size = ((ui->centralWidget->geometry().width()+ui->centralWidget->geometry().height()))/20;
+        int size = ((ui->centralWidget->geometry().width()+ui->centralWidget->geometry().height()))/25;
         font.setPointSize(size);
         ui->timeLabel->setFont(font);
     }

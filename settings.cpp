@@ -21,7 +21,6 @@
 Settings::Settings()
 {
     //set defaults
-    chime = 1;      // chime once on the hour
     timesystem = 1; // UTC
 }
 

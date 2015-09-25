@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.4.1
+** Created by: Qt User Interface Compiler version 5.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -41,6 +41,7 @@ public:
     QAction *actionJulian_Day;
     QAction *actionGreenwich_Apparent_Sidereal_Time;
     QAction *actionLocal_Mean_Sidereal_Time;
+    QAction *actionJulian_Day_Modified;
     QWidget *centralWidget;
     QGridLayout *gridLayout;
     QLabel *timeLabel;
@@ -49,7 +50,6 @@ public:
     QMenu *menuFile;
     QMenu *menuLocation;
     QMenu *menuTime;
-    QMenu *menuChimes;
     QMenu *menuHelp;
 
     void setupUi(QMainWindow *MainWindow)
@@ -108,6 +108,8 @@ public:
         actionGreenwich_Apparent_Sidereal_Time->setObjectName(QStringLiteral("actionGreenwich_Apparent_Sidereal_Time"));
         actionLocal_Mean_Sidereal_Time = new QAction(MainWindow);
         actionLocal_Mean_Sidereal_Time->setObjectName(QStringLiteral("actionLocal_Mean_Sidereal_Time"));
+        actionJulian_Day_Modified = new QAction(MainWindow);
+        actionJulian_Day_Modified->setObjectName(QStringLiteral("actionJulian_Day_Modified"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayout = new QGridLayout(centralWidget);
@@ -147,8 +149,6 @@ public:
         menuLocation->setObjectName(QStringLiteral("menuLocation"));
         menuTime = new QMenu(menuBar);
         menuTime->setObjectName(QStringLiteral("menuTime"));
-        menuChimes = new QMenu(menuBar);
-        menuChimes->setObjectName(QStringLiteral("menuChimes"));
         menuHelp = new QMenu(menuBar);
         menuHelp->setObjectName(QStringLiteral("menuHelp"));
         MainWindow->setMenuBar(menuBar);
@@ -156,7 +156,6 @@ public:
         menuBar->addAction(menuFile->menuAction());
         menuBar->addAction(menuLocation->menuAction());
         menuBar->addAction(menuTime->menuAction());
-        menuBar->addAction(menuChimes->menuAction());
         menuBar->addAction(menuHelp->menuAction());
         menuFile->addAction(actionExit);
         menuLocation->addAction(actionSet_Location);
@@ -167,9 +166,7 @@ public:
         menuTime->addAction(actionLocal_Sidereal_Time);
         menuTime->addAction(actionLocal_Mean_Sidereal_Time);
         menuTime->addAction(actionJulian_Day);
-        menuChimes->addAction(actionNone);
-        menuChimes->addAction(actionSingle);
-        menuChimes->addAction(actionMultiple);
+        menuTime->addAction(actionJulian_Day_Modified);
         menuHelp->addAction(actionAbout_Tempus);
 
         retranslateUi(MainWindow);
@@ -211,12 +208,12 @@ public:
         actionGreenwich_Apparent_Sidereal_Time->setText(QApplication::translate("MainWindow", "Greenwich Apparent Sidereal Time", 0));
         actionGreenwich_Apparent_Sidereal_Time->setShortcut(QApplication::translate("MainWindow", "Ctrl+A", 0));
         actionLocal_Mean_Sidereal_Time->setText(QApplication::translate("MainWindow", "Local Mean Sidereal Time", 0));
+        actionJulian_Day_Modified->setText(QApplication::translate("MainWindow", "Julian Day, Modified", 0));
         timeLabel->setText(QApplication::translate("MainWindow", "TimeLabel", 0));
         systemlabel->setText(QApplication::translate("MainWindow", "TextLabel", 0));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", 0));
         menuLocation->setTitle(QApplication::translate("MainWindow", "Location", 0));
         menuTime->setTitle(QApplication::translate("MainWindow", "Time", 0));
-        menuChimes->setTitle(QApplication::translate("MainWindow", "Chimes", 0));
         menuHelp->setTitle(QApplication::translate("MainWindow", "Help", 0));
     } // retranslateUi
 
