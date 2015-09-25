@@ -87,25 +87,67 @@ void MainWindow::setlocation()
 
 }
 
-void MainWindow::setutc()
-{
-    tempussettings.timesystem = 1;
-}
+
 void MainWindow::setlocal()
 {
     tempussettings.timesystem = 0;
 }
 
-QDateTime MainWindow::GetTime()
+void MainWindow::setutc()
+{
+    tempussettings.timesystem = 1;
+}
+
+void MainWindow::setgmst()
+{
+    tempussettings.timesystem = 2;
+}
+
+void MainWindow::setlst()
+{
+    tempussettings.timesystem = 3;
+}
+
+void MainWindow::setjd()
+{
+    tempussettings.timesystem = 4;
+}
+
+QString MainWindow::GetTimeString()
 {
     switch (tempussettings.timesystem) {
-    case 0:     return QDateTime::currentDateTime();
-    case 1:     return QDateTime::currentDateTimeUtc();
-    default:    return QDateTime::currentDateTime(); //so we at least return something
+    case 0:     return QDateTime::currentDateTime().toString();
+    case 1:     return QDateTime::currentDateTimeUtc().toString();
+    case 2:     return MainWindow::GMST().toString();
+    case 3:     return MainWindow::LST().toString();
+    case 4:     return QString::number(MainWindow::JulianDay());
+    default:    return QDateTime::currentDateTime().toString(); //so we at least return something
     }
 }
 
 QDateTime MainWindow::GMST() {
+
+    QDateTime GMST = QDateTime::currentDateTime(); // replace
+    return GMST;
+}
+
+
+QDateTime MainWindow::LST() {
+
+    QDateTime LST = QDateTime::currentDateTime(); // replace
+    return LST;
+
+}
+
+double MainWindow::JulianDay() {
+
+    QDate JD = QDate::currentDate(); // replace
+    int A = JD.year()/100;
+    int B = A/4;
+    int C = 2-A+B;
+    int E = 362.25*(JD.year()+4716);
+    int F = 30.6001*(JD.month()+1);
+    return C+JD.day()+E+F-1524.5;
 
 }
 
@@ -125,16 +167,7 @@ void MainWindow::UpdateTimeSystemLabel() {
 
 void MainWindow::PrintFormattedTime()
 {
-    QDateTime ourDateTime = GetTime();
-    QTime ourTime = ourDateTime.time();
-
-    if (tempussettings.chime == 1 && ourTime.hour() == 0 && ourTime.second() == 0)
-    {
-        ChimeOnce();
-    }
-
-
-    ui->timeLabel->setText(ourTime.toString());
+    ui->timeLabel->setText(GetTimeString());
 
     UpdateTimeSystemLabel();
 }

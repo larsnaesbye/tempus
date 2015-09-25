@@ -48,12 +48,18 @@ public slots:
     void about();
     void setlocation();
     void UpdateTimeSystemLabel();
-    QDateTime GetTime();
+    QString GetTimeString();
     QDateTime GMST();
+    QDateTime LST();
+    double JulianDay();
+
     void PrintFormattedTime();
     void ChimeOnce();
     void setutc();
     void setlocal();
+    void setgmst();
+    void setlst();
+    void setjd();
 
 };
 
