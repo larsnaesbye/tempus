@@ -22,6 +22,8 @@ Settings::Settings()
 {
     //set defaults
     timesystem = 1; // UTC
+    latitude = 0.0;
+    longitude = 0.0;
 }
 
 Settings::~Settings()

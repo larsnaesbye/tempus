@@ -22,9 +22,9 @@
 class Settings
 {
 public:
-    int chime ; // chiming options: 0 - off, 1 - once on hour, 2 - multiple on hour
     int timesystem; // 1 - UTC
-
+    double latitude;
+    double longitude;
     Settings();
     ~Settings();
 

@@ -25,8 +25,7 @@
 
 #include <iostream>
 #include <stdio.h>
-#include <string>
-#include <time.h>
+//#include <string>
 
 #include <QDateTime>
 #include <QFont>
@@ -46,7 +45,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->actionJulian_Day, SIGNAL(triggered()), this, SLOT(setjd()));
     connect(ui->actionJulian_Day_Modified, SIGNAL(triggered()), this, SLOT(setjdm()));
 
-    // Action Groups for our menus
+    // Action Group for our menus
 
     QActionGroup* timegroup = new QActionGroup( this );
 
