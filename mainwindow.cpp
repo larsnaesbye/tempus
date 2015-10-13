@@ -81,9 +81,7 @@ void MainWindow::setlocation()
 {
     SetLocation* setlocationdialog = new SetLocation(this);
     setlocationdialog->show();
-
 }
-
 
 void MainWindow::setlocal()
 {
@@ -145,24 +143,12 @@ QDateTime MainWindow::LST() {
 double MainWindow::JulianDay() {
 
     QDate JD = QDate::currentDate();
-    int A = JD.year()/100;
-    int B = A/4;
-    int C = 2-A+B;
-    int E = 362.25*(JD.year()+4716);
-    int F = 30.6001*(JD.month()+1);
-    return C+JD.day()+E+F-1524.5;
-
+    return JD.day()-32075+1461*(JD.year()+4800+(JD.month()-14)/12)/4+367*(JD.month()-2-(JD.month()-14)/12*12)/12-3*((JD.year()+4900+(JD.month()-14)/12)/100)/4;
 }
 
 double MainWindow::JulianDayModified() {
 
-    QDate JD = QDate::currentDate();
-    int A = JD.year()/100;
-    int B = A/4;
-    int C = 2-A+B;
-    int E = 362.25*(JD.year()+4716);
-    int F = 30.6001*(JD.month()+1);
-    return C+JD.day()+E+F-1524.5-2400000.5;
+    return JulianDay()-2400000.5;
 
 }
 
