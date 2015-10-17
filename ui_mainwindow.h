@@ -63,7 +63,6 @@ public:
         icon.addFile(QStringLiteral("resources/tempus.svg"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
         MainWindow->setAutoFillBackground(false);
-        MainWindow->setStyleSheet(QStringLiteral("background-color: #111133; color: #F0F0F0;"));
         MainWindow->setTabShape(QTabWidget::Rounded);
         MainWindow->setUnifiedTitleAndToolBarOnMac(true);
         actionExit = new QAction(MainWindow);

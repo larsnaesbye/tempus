@@ -25,7 +25,6 @@
 
 #include <iostream>
 #include <stdio.h>
-//#include <string>
 
 #include <QDateTime>
 #include <QFont>
@@ -172,12 +171,6 @@ void MainWindow::PrintFormattedTime()
     ui->timeLabel->setText(GetTimeString());
 
     UpdateTimeSystemLabel();
-}
-
-
-void MainWindow::ChimeOnce()
-{
-    QSound::play("resources/chime.wav");
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event)

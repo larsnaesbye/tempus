@@ -54,7 +54,6 @@ public slots:
     double JulianDay();
     double JulianDayModified();
     void PrintFormattedTime();
-    void ChimeOnce();
     void setutc();
     void setlocal();
     void setgmst();
