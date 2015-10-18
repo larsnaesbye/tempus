@@ -112,6 +112,16 @@ void MainWindow::setjdm()
     tempussettings.timesystem = 5;
 }
 
+void MainWindow::setlatitude(double inputlat)
+{
+    tempussettings.latitude = inputlat;
+}
+
+void MainWindow::setlongitude(double inputlong)
+{
+    tempussettings.longitude = inputlong;
+}
+
 QString MainWindow::GetTimeString()
 {
     switch (tempussettings.timesystem) {

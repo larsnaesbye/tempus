@@ -28,8 +28,8 @@ class Ui_SetLocation
 public:
     QListView *listView;
     QDialogButtonBox *buttonBox;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
+    QLineEdit *latbox;
+    QLineEdit *longbox;
     QLabel *label;
     QLabel *label_2;
     QRadioButton *radioButton;
@@ -51,12 +51,12 @@ public:
         buttonBox->setGeometry(QRect(210, 210, 176, 27));
         buttonBox->setOrientation(Qt::Horizontal);
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
-        lineEdit = new QLineEdit(SetLocation);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setGeometry(QRect(110, 10, 91, 27));
-        lineEdit_2 = new QLineEdit(SetLocation);
-        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(110, 50, 91, 27));
+        latbox = new QLineEdit(SetLocation);
+        latbox->setObjectName(QStringLiteral("latbox"));
+        latbox->setGeometry(QRect(110, 10, 91, 27));
+        longbox = new QLineEdit(SetLocation);
+        longbox->setObjectName(QStringLiteral("longbox"));
+        longbox->setGeometry(QRect(110, 50, 91, 27));
         label = new QLabel(SetLocation);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(10, 20, 67, 17));

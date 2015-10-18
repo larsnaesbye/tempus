@@ -17,6 +17,8 @@
 
 #include "setlocation.h"
 #include "ui_setlocation.h"
+#include "settings.h"
+#include "mainwindow.h"
 
 SetLocation::SetLocation(QWidget *parent) :
     QDialog(parent),
@@ -27,5 +29,8 @@ SetLocation::SetLocation(QWidget *parent) :
 
 SetLocation::~SetLocation()
 {
+    MainWindow::setlongitude(ui->longbox->text().toDouble());
+    MainWindow::setlatitude(ui->latbox->text().toDouble());
+
     delete ui;
 }

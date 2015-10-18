@@ -60,6 +60,8 @@ public slots:
     void setlst();
     void setjd();
     void setjdm();
+    void setlatitude(double inputlat);
+    void setlongitude(double inputlong);
 
 };
 

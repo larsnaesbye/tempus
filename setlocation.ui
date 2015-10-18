@@ -42,7 +42,7 @@
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="latbox">
    <property name="geometry">
     <rect>
      <x>110</x>
@@ -52,7 +52,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="longbox">
    <property name="geometry">
     <rect>
      <x>110</x>
