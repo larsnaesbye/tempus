@@ -29,8 +29,6 @@ SetLocation::SetLocation(QWidget *parent) :
 
 SetLocation::~SetLocation()
 {
-    MainWindow::setlongitude(ui->longbox->text().toDouble());
-    MainWindow::setlatitude(ui->latbox->text().toDouble());
 
     delete ui;
 }
