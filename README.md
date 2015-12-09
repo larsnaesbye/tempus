@@ -1,7 +1,9 @@
-# Tempus
-Tempus is a Free and Open Source utility for displaying the current time in various time systems, mainly for astronomical purposes.
+## Tempus
+Tempus is a Free and Open Source utility for displaying  time in various time systems, mainly for astronomical purposes.
 
 It was written for the Distro Astro Linux distribution in C++ using the Qt user interface toolkit for maximum compatibility in case someone wishes to port it to other platforms.
-It also serves as my first excursion into programming with the Qt framework.
+It also serves as my first excursion into programming and linking against the Qt user interface framework.
 
-It is intended to be small and unobtrusive, unless you want it to be.
+It is intended to be small and unobtrusive, unless you want it to be. There's a manual in there as well.
+
+You'll be needing Qt 5 or newer for it to work.
