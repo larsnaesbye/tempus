@@ -23,8 +23,8 @@
    <string>Tempus</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="tempusrsrc.qrc">
-    <normaloff>:/resources/tempus.svg</normaloff>:/resources/tempus.svg</iconset>
+   <iconset>
+    <normaloff>resources/tempus.svg</normaloff>resources/tempus.svg</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -278,9 +278,7 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="tempusrsrc.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>actionExit</sender>

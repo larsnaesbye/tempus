@@ -21,11 +21,16 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h \
     aboutdialog.h \
     setlocation.h \
-    settings.h
+    settings.h \
+    ui_aboutdialog.h \
+    ui_mainwindow.h \
+    ui_setlocation.h
 
 FORMS    += mainwindow.ui \
     aboutdialog.ui \
     setlocation.ui
 
-RESOURCES += \
-    tempusrsrc.qrc
+RESOURCES +=
+
+DISTFILES += \
+    resources/tempus.svg

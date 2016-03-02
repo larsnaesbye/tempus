@@ -1,5 +1,6 @@
 <RCC>
-    <qresource prefix="/">
+    <qresource prefix="/"/>
+    <qresource prefix="/icons">
         <file>resources/tempus.svg</file>
     </qresource>
 </RCC>
