@@ -27,4 +27,5 @@ FORMS    += mainwindow.ui \
     aboutdialog.ui \
     setlocation.ui
 
-RESOURCES +=
+RESOURCES += \
+    tempusrsrc.qrc
