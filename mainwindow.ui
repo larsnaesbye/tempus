@@ -109,6 +109,9 @@
     <addaction name="actionLocal_Mean_Sidereal_Time"/>
     <addaction name="actionJulian_Day"/>
     <addaction name="actionJulian_Day_Modified"/>
+    <addaction name="separator"/>
+    <addaction name="actionCycle_forward"/>
+    <addaction name="actionCycle_back"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -274,6 +277,16 @@
   <action name="actionJulian_Day_Modified">
    <property name="text">
     <string>Julian Day, Modified</string>
+   </property>
+  </action>
+  <action name="actionCycle_forward">
+   <property name="text">
+    <string>Cycle forward</string>
+   </property>
+  </action>
+  <action name="actionCycle_back">
+   <property name="text">
+    <string>Cycle back</string>
    </property>
   </action>
  </widget>
