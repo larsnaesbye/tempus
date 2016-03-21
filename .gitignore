@@ -1,3 +1,5 @@
 .DS_Store
+*.o
 Tempus.pro.user.*
+*~
 Tempus.pro.user
