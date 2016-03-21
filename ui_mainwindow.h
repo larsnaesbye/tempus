@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.5.0
+** Created by: Qt User Interface Compiler version 5.5.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -28,20 +28,17 @@ class Ui_MainWindow
 public:
     QAction *actionExit;
     QAction *actionSet_Location;
-    QAction *actionLocal_Mean_Time_12_hr_format;
     QAction *actionLocal_Mean_Time_24_hr_format;
     QAction *actionUniversal_Time;
     QAction *actionLocal_Sidereal_Time;
     QAction *actionGreenwich_Sidereal_Time;
-    QAction *actionNone;
-    QAction *actionSingle;
-    QAction *actionMultiple;
     QAction *actionAbout_Tempus;
-    QAction *actionFull_Screen;
     QAction *actionJulian_Day;
     QAction *actionGreenwich_Apparent_Sidereal_Time;
     QAction *actionLocal_Mean_Sidereal_Time;
     QAction *actionJulian_Day_Modified;
+    QAction *actionCycle_forward;
+    QAction *actionCycle_back;
     QWidget *centralWidget;
     QGridLayout *gridLayout;
     QLabel *timeLabel;
@@ -69,9 +66,6 @@ public:
         actionExit->setObjectName(QStringLiteral("actionExit"));
         actionSet_Location = new QAction(MainWindow);
         actionSet_Location->setObjectName(QStringLiteral("actionSet_Location"));
-        actionLocal_Mean_Time_12_hr_format = new QAction(MainWindow);
-        actionLocal_Mean_Time_12_hr_format->setObjectName(QStringLiteral("actionLocal_Mean_Time_12_hr_format"));
-        actionLocal_Mean_Time_12_hr_format->setCheckable(true);
         actionLocal_Mean_Time_24_hr_format = new QAction(MainWindow);
         actionLocal_Mean_Time_24_hr_format->setObjectName(QStringLiteral("actionLocal_Mean_Time_24_hr_format"));
         actionLocal_Mean_Time_24_hr_format->setCheckable(true);
@@ -85,22 +79,8 @@ public:
         actionGreenwich_Sidereal_Time = new QAction(MainWindow);
         actionGreenwich_Sidereal_Time->setObjectName(QStringLiteral("actionGreenwich_Sidereal_Time"));
         actionGreenwich_Sidereal_Time->setCheckable(true);
-        actionNone = new QAction(MainWindow);
-        actionNone->setObjectName(QStringLiteral("actionNone"));
-        actionNone->setCheckable(true);
-        actionNone->setChecked(true);
-        actionNone->setEnabled(true);
-        actionSingle = new QAction(MainWindow);
-        actionSingle->setObjectName(QStringLiteral("actionSingle"));
-        actionSingle->setCheckable(true);
-        actionMultiple = new QAction(MainWindow);
-        actionMultiple->setObjectName(QStringLiteral("actionMultiple"));
-        actionMultiple->setCheckable(true);
-        actionMultiple->setEnabled(true);
         actionAbout_Tempus = new QAction(MainWindow);
         actionAbout_Tempus->setObjectName(QStringLiteral("actionAbout_Tempus"));
-        actionFull_Screen = new QAction(MainWindow);
-        actionFull_Screen->setObjectName(QStringLiteral("actionFull_Screen"));
         actionJulian_Day = new QAction(MainWindow);
         actionJulian_Day->setObjectName(QStringLiteral("actionJulian_Day"));
         actionGreenwich_Apparent_Sidereal_Time = new QAction(MainWindow);
@@ -109,6 +89,10 @@ public:
         actionLocal_Mean_Sidereal_Time->setObjectName(QStringLiteral("actionLocal_Mean_Sidereal_Time"));
         actionJulian_Day_Modified = new QAction(MainWindow);
         actionJulian_Day_Modified->setObjectName(QStringLiteral("actionJulian_Day_Modified"));
+        actionCycle_forward = new QAction(MainWindow);
+        actionCycle_forward->setObjectName(QStringLiteral("actionCycle_forward"));
+        actionCycle_back = new QAction(MainWindow);
+        actionCycle_back->setObjectName(QStringLiteral("actionCycle_back"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayout = new QGridLayout(centralWidget);
@@ -158,6 +142,9 @@ public:
         menuBar->addAction(menuHelp->menuAction());
         menuFile->addAction(actionExit);
         menuLocation->addAction(actionSet_Location);
+        menuTime->addAction(actionCycle_forward);
+        menuTime->addAction(actionCycle_back);
+        menuTime->addSeparator();
         menuTime->addAction(actionUniversal_Time);
         menuTime->addAction(actionLocal_Mean_Time_24_hr_format);
         menuTime->addAction(actionGreenwich_Apparent_Sidereal_Time);
@@ -183,8 +170,6 @@ public:
         actionExit->setShortcut(QApplication::translate("MainWindow", "Ctrl+X", 0));
         actionSet_Location->setText(QApplication::translate("MainWindow", "Set Location...", 0));
         actionSet_Location->setShortcut(QApplication::translate("MainWindow", "Ctrl+L", 0));
-        actionLocal_Mean_Time_12_hr_format->setText(QApplication::translate("MainWindow", "Local Mean Time (12 hr format)", 0));
-        actionLocal_Mean_Time_12_hr_format->setShortcut(QApplication::translate("MainWindow", "Ctrl+1", 0));
         actionLocal_Mean_Time_24_hr_format->setText(QApplication::translate("MainWindow", "Local Mean Time", 0));
         actionLocal_Mean_Time_24_hr_format->setShortcut(QApplication::translate("MainWindow", "Ctrl+M", 0));
         actionUniversal_Time->setText(QApplication::translate("MainWindow", "Universal Time, Coordinated", 0));
@@ -193,21 +178,18 @@ public:
         actionLocal_Sidereal_Time->setShortcut(QApplication::translate("MainWindow", "Ctrl+S", 0));
         actionGreenwich_Sidereal_Time->setText(QApplication::translate("MainWindow", "Greenwich Mean Sidereal Time", 0));
         actionGreenwich_Sidereal_Time->setShortcut(QApplication::translate("MainWindow", "Ctrl+G", 0));
-        actionNone->setText(QApplication::translate("MainWindow", "None", 0));
-        actionNone->setShortcut(QApplication::translate("MainWindow", "Ctrl+0", 0));
-        actionSingle->setText(QApplication::translate("MainWindow", "Once on the hour", 0));
-        actionSingle->setShortcut(QApplication::translate("MainWindow", "Ctrl+1", 0));
-        actionMultiple->setText(QApplication::translate("MainWindow", "Multiple on the hour", 0));
-        actionMultiple->setShortcut(QApplication::translate("MainWindow", "Ctrl+2", 0));
         actionAbout_Tempus->setText(QApplication::translate("MainWindow", "About Tempus...", 0));
         actionAbout_Tempus->setShortcut(QApplication::translate("MainWindow", "F1", 0));
-        actionFull_Screen->setText(QApplication::translate("MainWindow", "Full Screen", 0));
         actionJulian_Day->setText(QApplication::translate("MainWindow", "Julian Day", 0));
         actionJulian_Day->setShortcut(QApplication::translate("MainWindow", "Ctrl+J", 0));
         actionGreenwich_Apparent_Sidereal_Time->setText(QApplication::translate("MainWindow", "Greenwich Apparent Sidereal Time", 0));
         actionGreenwich_Apparent_Sidereal_Time->setShortcut(QApplication::translate("MainWindow", "Ctrl+A", 0));
         actionLocal_Mean_Sidereal_Time->setText(QApplication::translate("MainWindow", "Local Mean Sidereal Time", 0));
         actionJulian_Day_Modified->setText(QApplication::translate("MainWindow", "Julian Day, Modified", 0));
+        actionCycle_forward->setText(QApplication::translate("MainWindow", "Cycle forward", 0));
+        actionCycle_forward->setShortcut(QApplication::translate("MainWindow", "Right", 0));
+        actionCycle_back->setText(QApplication::translate("MainWindow", "Cycle back", 0));
+        actionCycle_back->setShortcut(QApplication::translate("MainWindow", "Left", 0));
         timeLabel->setText(QApplication::translate("MainWindow", "TimeLabel", 0));
         systemlabel->setText(QApplication::translate("MainWindow", "TextLabel", 0));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", 0));
