@@ -1,5 +1,7 @@
 .DS_Store
 *.o
-Tempus.pro.user.*
 *~
+Makefile
+Tempus
+Tempus.pro.user.*
 Tempus.pro.user
