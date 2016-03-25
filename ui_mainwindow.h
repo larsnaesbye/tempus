@@ -142,9 +142,6 @@ public:
         menuBar->addAction(menuHelp->menuAction());
         menuFile->addAction(actionExit);
         menuLocation->addAction(actionSet_Location);
-        menuTime->addAction(actionCycle_forward);
-        menuTime->addAction(actionCycle_back);
-        menuTime->addSeparator();
         menuTime->addAction(actionUniversal_Time);
         menuTime->addAction(actionLocal_Mean_Time_24_hr_format);
         menuTime->addAction(actionGreenwich_Apparent_Sidereal_Time);
@@ -153,6 +150,9 @@ public:
         menuTime->addAction(actionLocal_Mean_Sidereal_Time);
         menuTime->addAction(actionJulian_Day);
         menuTime->addAction(actionJulian_Day_Modified);
+        menuTime->addSeparator();
+        menuTime->addAction(actionCycle_forward);
+        menuTime->addAction(actionCycle_back);
         menuHelp->addAction(actionAbout_Tempus);
 
         retranslateUi(MainWindow);
@@ -186,9 +186,9 @@ public:
         actionGreenwich_Apparent_Sidereal_Time->setShortcut(QApplication::translate("MainWindow", "Ctrl+A", 0));
         actionLocal_Mean_Sidereal_Time->setText(QApplication::translate("MainWindow", "Local Mean Sidereal Time", 0));
         actionJulian_Day_Modified->setText(QApplication::translate("MainWindow", "Julian Day, Modified", 0));
-        actionCycle_forward->setText(QApplication::translate("MainWindow", "Cycle forward", 0));
+        actionCycle_forward->setText(QApplication::translate("MainWindow", "Cycle Forward", 0));
         actionCycle_forward->setShortcut(QApplication::translate("MainWindow", "Right", 0));
-        actionCycle_back->setText(QApplication::translate("MainWindow", "Cycle back", 0));
+        actionCycle_back->setText(QApplication::translate("MainWindow", "Cycle Back", 0));
         actionCycle_back->setShortcut(QApplication::translate("MainWindow", "Left", 0));
         timeLabel->setText(QApplication::translate("MainWindow", "TimeLabel", 0));
         systemlabel->setText(QApplication::translate("MainWindow", "TextLabel", 0));

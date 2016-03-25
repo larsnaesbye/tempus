@@ -27,7 +27,7 @@ public:
     double longitude;
     Settings();
     ~Settings();
-
+    double getLongitude();
 };
 
 #endif // SETTINGS_H

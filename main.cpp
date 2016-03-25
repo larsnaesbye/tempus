@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 
     app.setApplicationName("Tempus");
     app.setApplicationVersion("1.0");
-    app.setApplicationDisplayName("Astronomy Clock");
+//    app.setApplicationDisplayName("Astronomy Clock");
     app.setOrganizationDomain("https://larsnaesbye.github.io/tempus");
     app.setOrganizationName("Lars Næsbye Christensen");
     app.setDesktopSettingsAware(false);

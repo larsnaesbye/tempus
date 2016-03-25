@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'setlocation.ui'
 **
-** Created by: Qt User Interface Compiler version 5.5.0
+** Created by: Qt User Interface Compiler version 5.5.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -28,12 +28,8 @@ class Ui_SetLocation
 public:
     QListView *listView;
     QDialogButtonBox *buttonBox;
-    QLineEdit *latbox;
     QLineEdit *longbox;
-    QLabel *label;
     QLabel *label_2;
-    QRadioButton *radioButton;
-    QRadioButton *radioButton_2;
     QRadioButton *radioButton_3;
     QRadioButton *radioButton_4;
 
@@ -51,30 +47,18 @@ public:
         buttonBox->setGeometry(QRect(210, 210, 176, 27));
         buttonBox->setOrientation(Qt::Horizontal);
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
-        latbox = new QLineEdit(SetLocation);
-        latbox->setObjectName(QStringLiteral("latbox"));
-        latbox->setGeometry(QRect(110, 10, 91, 27));
         longbox = new QLineEdit(SetLocation);
         longbox->setObjectName(QStringLiteral("longbox"));
-        longbox->setGeometry(QRect(110, 50, 91, 27));
-        label = new QLabel(SetLocation);
-        label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(10, 20, 67, 17));
+        longbox->setGeometry(QRect(110, 20, 71, 27));
         label_2 = new QLabel(SetLocation);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(10, 60, 81, 17));
-        radioButton = new QRadioButton(SetLocation);
-        radioButton->setObjectName(QStringLiteral("radioButton"));
-        radioButton->setGeometry(QRect(220, 10, 41, 22));
-        radioButton_2 = new QRadioButton(SetLocation);
-        radioButton_2->setObjectName(QStringLiteral("radioButton_2"));
-        radioButton_2->setGeometry(QRect(290, 10, 41, 22));
+        label_2->setGeometry(QRect(10, 30, 81, 17));
         radioButton_3 = new QRadioButton(SetLocation);
         radioButton_3->setObjectName(QStringLiteral("radioButton_3"));
-        radioButton_3->setGeometry(QRect(290, 50, 41, 22));
+        radioButton_3->setGeometry(QRect(280, 20, 41, 22));
         radioButton_4 = new QRadioButton(SetLocation);
         radioButton_4->setObjectName(QStringLiteral("radioButton_4"));
-        radioButton_4->setGeometry(QRect(220, 50, 41, 22));
+        radioButton_4->setGeometry(QRect(210, 20, 41, 22));
 
         retranslateUi(SetLocation);
         QObject::connect(buttonBox, SIGNAL(accepted()), SetLocation, SLOT(accept()));
@@ -86,10 +70,7 @@ public:
     void retranslateUi(QDialog *SetLocation)
     {
         SetLocation->setWindowTitle(QApplication::translate("SetLocation", "Set Location", 0));
-        label->setText(QApplication::translate("SetLocation", "Latitude :", 0));
         label_2->setText(QApplication::translate("SetLocation", "Longitude :", 0));
-        radioButton->setText(QApplication::translate("SetLocation", "N", 0));
-        radioButton_2->setText(QApplication::translate("SetLocation", "S", 0));
         radioButton_3->setText(QApplication::translate("SetLocation", "E", 0));
         radioButton_4->setText(QApplication::translate("SetLocation", "W", 0));
     } // retranslateUi

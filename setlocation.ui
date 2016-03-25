@@ -42,44 +42,21 @@
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
-  <widget class="QLineEdit" name="latbox">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>10</y>
-     <width>91</width>
-     <height>27</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="longbox">
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>50</y>
-     <width>91</width>
+     <y>20</y>
+     <width>71</width>
      <height>27</height>
     </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>20</y>
-     <width>67</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Latitude :</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>60</y>
+     <y>30</y>
      <width>81</width>
      <height>17</height>
     </rect>
@@ -88,37 +65,11 @@
     <string>Longitude :</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>10</y>
-     <width>41</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>N</string>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="radioButton_2">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>10</y>
-     <width>41</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>S</string>
-   </property>
-  </widget>
   <widget class="QRadioButton" name="radioButton_3">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>50</y>
+     <x>280</x>
+     <y>20</y>
      <width>41</width>
      <height>22</height>
     </rect>
@@ -130,8 +81,8 @@
   <widget class="QRadioButton" name="radioButton_4">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>50</y>
+     <x>210</x>
+     <y>20</y>
      <width>41</width>
      <height>22</height>
     </rect>

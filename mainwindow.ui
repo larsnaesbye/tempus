@@ -101,9 +101,6 @@
     <property name="title">
      <string>Time</string>
     </property>
-    <addaction name="actionCycle_forward"/>
-    <addaction name="actionCycle_back"/>
-    <addaction name="separator"/>
     <addaction name="actionUniversal_Time"/>
     <addaction name="actionLocal_Mean_Time_24_hr_format"/>
     <addaction name="actionGreenwich_Apparent_Sidereal_Time"/>
@@ -112,6 +109,9 @@
     <addaction name="actionLocal_Mean_Sidereal_Time"/>
     <addaction name="actionJulian_Day"/>
     <addaction name="actionJulian_Day_Modified"/>
+    <addaction name="separator"/>
+    <addaction name="actionCycle_forward"/>
+    <addaction name="actionCycle_back"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -223,7 +223,7 @@
   </action>
   <action name="actionCycle_forward">
    <property name="text">
-    <string>Cycle forward</string>
+    <string>Cycle Forward</string>
    </property>
    <property name="shortcut">
     <string>Right</string>
@@ -231,7 +231,7 @@
   </action>
   <action name="actionCycle_back">
    <property name="text">
-    <string>Cycle back</string>
+    <string>Cycle Back</string>
    </property>
    <property name="shortcut">
     <string>Left</string>

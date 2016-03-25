@@ -21,7 +21,7 @@
 Settings::Settings()
 {
     //set defaults
-    timesystem = 1; // UTC
+    timesystem = 1; // UT
     latitude = 0.0;
     longitude = 0.0;
 }
@@ -31,3 +31,6 @@ Settings::~Settings()
 
 }
 
+double Settings::getLongitude() {
+    return longitude;
+}

@@ -25,6 +25,7 @@ SetLocation::SetLocation(QWidget *parent) :
     ui(new Ui::SetLocation)
 {
     ui->setupUi(this);
+    ui->radioButton_3->setChecked(true);
 }
 
 SetLocation::~SetLocation()
