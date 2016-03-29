@@ -226,7 +226,7 @@
     <string>Cycle Forward</string>
    </property>
    <property name="shortcut">
-    <string>Right</string>
+    <string>Ctrl+Right</string>
    </property>
   </action>
   <action name="actionCycle_back">
@@ -234,7 +234,7 @@
     <string>Cycle Back</string>
    </property>
    <property name="shortcut">
-    <string>Left</string>
+    <string>Ctrl+Left</string>
    </property>
   </action>
  </widget>
