@@ -23,6 +23,7 @@ AboutDialog::AboutDialog(QWidget *parent) :
     ui(new Ui::AboutDialog)
 {
     ui->setupUi(this);
+    ui->label->setText(QString("Tempus 1.0 by Lars Næsbye Christensen\n\nQt version: ") + QT_VERSION_STR);
 }
 
 AboutDialog::~AboutDialog()
