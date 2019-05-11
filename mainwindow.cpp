@@ -186,10 +186,10 @@ void MainWindow::PrintFormattedTime()
 void MainWindow::resizeEvent(QResizeEvent *event)
 {
     QMainWindow::resizeEvent(event);
-    if(this)
+    //if(this)
     {
         QFont font = ui->timeLabel->font();
-        int size = ((ui->centralWidget->geometry().width()+ui->centralWidget->geometry().height()))/25;
+        int size = ((ui->centralWidget->geometry().width()+ui->centralWidget->geometry().height()))/26;
         font.setPointSize(size);
         ui->timeLabel->setFont(font);
     }
