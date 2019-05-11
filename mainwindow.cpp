@@ -24,7 +24,7 @@
 #include "ui_setlocation.h"
 
 #include <iostream>
-#include <stdio.h>
+#include <cstdio>
 
 #include <QDateTime>
 #include <QFont>
