@@ -24,19 +24,13 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    app.setApplicationName("Tempus");
-    app.setApplicationVersion("1.0");
-    app.setOrganizationDomain("https://larsnaesbye.github.io/tempus");
-    app.setOrganizationName("Lars Næsbye Christensen");
-    app.setDesktopSettingsAware(false);
-    app.setEffectEnabled(Qt::UI_FadeMenu, true);
-    app.setEffectEnabled(Qt::UI_AnimateMenu, true);
-    app.setEffectEnabled(Qt::UI_AnimateCombo, true);
-    app.setEffectEnabled(Qt::UI_AnimateTooltip, true);
-    app.setEffectEnabled(Qt::UI_FadeTooltip, true);
-
+    QApplication::setApplicationName("Tempus");
+    QApplication::setApplicationVersion("1.0");
+    QApplication::setOrganizationDomain("https://larsnaesbye.github.io/tempus");
+    QApplication::setOrganizationName("Lars Næsbye Christensen");
+    QApplication::setDesktopSettingsAware(true);
     MainWindow w;
     w.show();
 
-    return app.exec();
+    return QApplication::exec();
 }

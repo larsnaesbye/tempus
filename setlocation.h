@@ -29,8 +29,8 @@ class SetLocation : public QDialog
     Q_OBJECT
 
 public:
-    explicit SetLocation(QWidget *parent = 0);
-    ~SetLocation();
+    explicit SetLocation(QWidget *parent = nullptr);
+     ~SetLocation() override;
 
 private:
     Ui::SetLocation *ui;

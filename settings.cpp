@@ -27,9 +27,7 @@ Settings::Settings()
 }
 
 Settings::~Settings()
-{
-
-}
+=default;
 
 double Settings::getLongitude() {
     return longitude;
